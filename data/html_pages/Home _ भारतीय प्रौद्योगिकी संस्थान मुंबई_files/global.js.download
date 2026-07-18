@@ -1,0 +1,169 @@
+/**
+ * @file
+ * Global utilities.
+ *
+ */
+(function ($, Drupal) {
+
+  'use strict';
+
+  Drupal.behaviors.iitb_bootstrap = {
+    attach: function (context, settings) {
+      $('.search-icon').on('click', function () {
+        $(this).siblings('.search-form-wrapper').toggle();
+        $(this).parents('.block-search').toggleClass('search-open');
+        $(this).parents().siblings('.navbar-collapse.show').removeClass('show');
+        $(this).parents().siblings('.navbar-toggler').attr('aria-expanded', false);
+
+      });
+      $(document).ready(function () {
+        $('.homepage-news > .view-content').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true,
+          responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 575,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+        $('.research-highlights > .view-content').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true,
+          responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 575,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+        $('.homepage-events > .view-content').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true,
+          responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 575,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+      });
+      $('.iitb-accordion.main-item > .accordion-group > .accordion-head').once('divisionPage').on('click', function () {
+      //  $(this).siblings('.accordion-data').slideToggle();
+        $(this).parents('.main-item').toggleClass('div-open');
+      //  $('.iitb-accordion.main-item > .accordion-group > .accordion-head').not(this).siblings('.accordion-data').slideUp();
+        $('.iitb-accordion.main-item > .accordion-group').not($(this).parents('.accordion-group')).removeClass('div-open');
+      });
+    /*   $(document).ready(function () {
+        // Find the search input within the "academic-divisions" view
+        var searchInput = document.querySelector('.academic-divisions input[name="title"]');
+
+        if (searchInput) {
+          const urlParams = new URLSearchParams(window.location.search);
+          const myParam = urlParams.get('title');
+
+          // Check if the "title" parameter is present and not empty
+          if (myParam !== null && myParam !== '') {
+            console.log("here1");
+            openAccordion();
+          }
+        }
+      });
+
+      // Function to open the accordion
+      function openAccordion() {
+        var accordionGroups = document.querySelectorAll('.iitb-accordion');
+        if (accordionGroups) {
+          accordionGroups.forEach(function (accordionGroup) {
+            accordionGroup.classList.add('div-open');
+          });
+        }
+      } */
+
+      $(document).ready(function () {
+        if (document.body.classList.contains('page-node-3614')) {
+          var hamburgerMenu = document.querySelector('.hamburger-menu');
+          var sidebarNavigation = document.querySelector('#block-gendercellnavigation');
+
+          hamburgerMenu.addEventListener('click', function () {
+            sidebarNavigation.classList.toggle('open');
+            hamburgerMenu.classList.toggle('gc-toggled');
+          });
+        }
+
+
+
+        if (document.body.classList.contains('page-node-4421')) {
+          var hamburgerMenu = document.querySelector('.hamburger-menu');
+          var sidebarNavigation = document.querySelector('#block-deanstrategycellnavigation');
+
+          hamburgerMenu.addEventListener('click', function () {
+            sidebarNavigation.classList.toggle('open');
+            hamburgerMenu.classList.toggle('gc-toggled');
+          });
+        }
+
+
+
+      });
+    }
+  };
+
+})(jQuery, Drupal);

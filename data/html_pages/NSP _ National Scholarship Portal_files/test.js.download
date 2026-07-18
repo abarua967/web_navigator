@@ -1,0 +1,457 @@
+var audio_context;
+var flag=0;
+var soc1;
+var Mediaflag=0;
+	
+	
+$( document ).ready(function() {
+   // c1 = new asrService("wss", "localhost","8020");
+
+
+	/************************************************************************************************************************
+          //------------------------------Show transcripted text in input field----------------------//
+    *************************************************************************************************************************/
+   function displayTranscript(data){
+    console.log(data);
+    $("#InputEnter").val(data['transcript']);
+    if (data['is_final']){
+		$("#InputEnter").val(data['transcript'])
+        //$("#InputEnter").append('<div></div>');
+    }
+   }
+   
+  
+	/************************************************************************************************************************
+           //-----------------------when user click on Mic button--------------------------------------//
+    *************************************************************************************************************************/
+   $('#img_phone').on('click',function(){
+		$('#img_phone_slash').css("display", "block");
+        $('#img_phone').css("display", "none");
+		startASRRivaService();  
+		if(flag==1)
+		{
+				var str = "<div class=\"appendMovingDots\" style=\"font-size:14px; color:green;\">I am Listening</div>";
+				$(".typing").append(str);
+		}
+				//startASRRiva("wss","10.72.167.247","8000",'en' ,displayTranscript);
+		
+    });
+	
+	
+    /************************************************************************************************************************
+         //----------------------------when user click on Mute button------------------------------------//
+    *************************************************************************************************************************/
+	$('#img_phone_slash').on('click',function(){
+        //console.log("test btn click");
+		$('#img_phone_slash').css("display", "none");
+        $('#img_phone').css("display", "block");
+		$("div.appendMovingDots").remove();
+        CloseAudioContext();   //close audio context
+    });
+	
+	
+	
+    /************************************************************************************************************************
+        //---------------------------Mic button hover----------------------------------------------------//
+    *************************************************************************************************************************/
+	$("#img_phone").hover(function () {
+                $(this).css('cursor', 'pointer').attr('title', 'START');
+            }, function () {
+                $(this).css('cursor', 'auto');
+            });
+
+   
+    /************************************************************************************************************************
+        //-------------------------------Mute button hover-------------------------------------------------//
+    *************************************************************************************************************************/     
+	$("#img_phone_slash").hover(function () {
+                $(this).css('cursor', 'pointer').attr('title', 'STOP');
+            }, function () {
+                $(this).css('cursor', 'auto');
+            });   
+});
+
+    /************************************************************************************************************************
+        //-------------------------------Connect with ASR SERVICE-------------------------------------------------//
+    *************************************************************************************************************************/ 
+		function connectASRService()
+		{
+			soc1 = new asrService("wss","vani-hyd.nic.in","8000");
+			// const wsUri = "wss://testvani-hyd.nic.in:8000";    
+			// soc1 = io(wsUri);
+			// soc1.on("connect", () => {
+            // console.log(soc1.connected); // true
+			// flag=1;
+			// });
+		}
+
+        
+		// soc1.on('connect_error', function(result) {
+			// flag=0;
+			
+		  // })
+		  // soc1.on('connect_failed', function(result) {
+			
+			// flag=0;
+			
+		  // })
+		  // soc1.on('disconnect', function(result) {
+			// flag=0;
+			
+		  // })
+
+		// soc1.on("lang_pair_resp", function (data) {
+            // console.log(data); // true
+        // });
+        // soc1.socket.on("transcript", function (data) {
+            // console.log(data.transcript); // true
+            // //var d = JSON.parse(data);
+            // //if (data.is_final == true) {
+            // //    console.log(data.transcript);
+
+            // //}
+            // $("#InputEnter").val(data['transcript']);
+			// if (data['is_final']){
+			// $("#InputEnter").val(data['transcript'])
+			// //$("#InputEnter").append('<div></div>');
+		// }
+        // });
+		
+        
+
+		
+		/************************************************************************************************************************
+			//---------------------------------Check whether to show the Mic or not----------------------------------//
+		*************************************************************************************************************************/   
+		function ShowhideMic()
+		{
+			//check media devices 
+			checkMediaDevices().then(()=>{
+			
+			//checkASRConnection();
+			if(Mediaflag==1)    //if media devices are available
+			{
+				$('#img_phone').css("display", "block");  //show mic
+			}
+			else
+			{
+				$('#img_phone').css("display", "none");   //hide mic
+				alert("Media device not found!Kindly continue with text messages.")
+			}
+			});
+			
+		}
+		
+		/************************************************************************************************************************
+			//---------------------------------Check Media devices----------------------------------//
+		*************************************************************************************************************************/
+		async function checkMediaDevices()
+		{
+			await navigator.mediaDevices
+                    .getUserMedia({ audio: true, video: false })
+                    .then((stream) => {
+						Mediaflag=1;
+						//$('#img_phone').css("display", "block");
+					})
+					.catch((err)=>{
+						Mediaflag=0;
+						//$('#img_phone').css("display", "none");
+					});
+			
+		}
+		
+		
+		//---------------------------------------Check ASR Connection------------------------------------------//
+		// async function checkASRConnection()
+		// {
+			// return await new Promise((resolve)=>
+			// {
+				// setInterval(()=> soc1.connect(),4000)
+					// if(flag==1)  //if ASR connection is successful
+						// {
+							// $('#img_phone').css("display", "block");
+						// }
+						// else
+						// {
+							// $('#img_phone').css("display", "none");
+							// alert("Due to some technical issue,we are not able to proceed with voice services.Kindly continue with text messages.")
+						// }
+			// });
+			// // }).catch((err)=>{})
+				// // // .then(()=>{
+						// // // if(soc1.connected)  //if ASR connection is successful
+						// // // {
+							// // // $('#img_phone').css("display", "block");
+						// // // }
+						// // // else
+						// // // {
+							// // // $('#img_phone').css("display", "none");
+							// // // alert("Due to some technical issue,we are not able to proceed with voice services.Kindly continue with text messages.")
+						// // // }
+					// // // });
+				// // await new Promise(()=>soc1.connect()).then(()=>{
+				// // if(soc1.connected)  //if ASR connection is successful
+						// // {
+							// // $('#img_phone').css("display", "block");
+						// // }
+						// // else
+						// // {
+							// // $('#img_phone').css("display", "none");
+							// // alert("Due to some technical issue,we are not able to proceed with voice services.Kindly continue with text messages.")
+						// // }
+				// // });
+
+
+			// // .then(()=>{if(flag==1)  //if ASR connection is successful
+					// // {
+						// // $('#img_phone').css("display", "block");
+					// // }
+					// // else
+					// // {
+						// // $('#img_phone').css("display", "none");
+						// // alert("Due to some technical issue,we are not able to proceed with voice services.Kindly continue with text messages.")
+					// // }});
+		// }
+		
+		
+		/************************************************************************************************************************
+			//--------------------------------TO reconnect with ASR service--------------------------------------------//
+		*************************************************************************************************************************/
+		
+        function restartconnectionService() {
+			if (flag == 0) {
+				soc1.socket.connect();
+				//flag = 1;
+			}
+        }
+
+		/************************************************************************************************************************
+			//-----------------------------------Start ASR service and send audio on the channel------------------------------//
+		*************************************************************************************************************************/
+		
+        function startASRRivaService() {
+            //optionsASR = {};
+
+			//if connection is unsuccessful then connect again with ASR service
+            if (flag == 0) {
+
+                restartconnectionService();
+            }
+			if(!soc1.socket.connected)
+				{
+				alert("Due to some technical issue,we are not able to proceed with voice services.Kindly continue with text messages.");
+				$('#img_phone_slash').click();
+				return false;
+				}
+			
+			
+            audio_context = new AudioContext();
+            var optionsASR = { model: "1", language: voice_lang, sampleRate: 44100 };
+            //optionsASR.model = 1;
+            //optionsASR.sampleRate = sampleRate;
+            //optionsASR.language = language;
+            // to start asr service 
+            soc1.socket.emit('startasr', optionsASR);
+
+            if (navigator.mediaDevices) {
+                //console.log("getUserMedia supported.");
+				
+                navigator.mediaDevices
+                    .getUserMedia({ audio: true, video: false })
+                    .then((stream) => {
+                        // Start ASR streaming
+                        let audioInput = audio_context.createMediaStreamSource(stream);
+
+                        // The stream-processor worklet node does the conversion from Float32 into 16-bit PCM
+                        // Here code for pcm conversion added directly to web browser audio pipline as a module
+                        audio_context.audioWorklet.addModule('streamProcessor.js')
+                            .then(function () {
+                                // taken audio in put from browser
+                                var streamWorkletNode = new AudioWorkletNode(audio_context, 'stream-processor', {
+                                    processorOptions: {
+                                        sampleRate: 44100
+                                    }
+                                });
+                                streamWorkletNode.port.onmessage = (event) => {
+                                    // Send transformed PCM buffer to the server
+                                    soc1.socket.emit('audio_in', event.data);
+                                };
+
+                                // connect stream to our worklet
+                                audioInput.connect(streamWorkletNode);
+                                // connect our worklet to the previous destination
+                                streamWorkletNode.connect(audio_context.destination);
+                            });
+                        
+                    })
+					.catch((err)=>{
+						alert("Media device not found!");
+						$('#img_phone_slash').click();
+					});
+					
+            } 
+			else 
+			{
+            console.log("getUserMedia not supported on your browser!");
+			}
+
+
+ }
+		
+		/************************************************************************************************************************
+			//-----------------------------------------Close audio context--------------------------------------//
+		*************************************************************************************************************************/
+		
+        function CloseAudioContext() {
+            //speechService = false;
+			if(audio_context!=null)
+			{
+				if(audio_context.state!='closed')
+				{
+					audio_context.close();
+				}
+			}
+            //soc1.emit('stop');
+            //soc1.disconnect();
+            //flag = 0;
+        }
+
+		/************************************************************************************************************************
+			//-------------------------------------Close audio context and stop ASR service connection-------------------------//
+		*************************************************************************************************************************/
+		
+		function stopASRService() {
+			soc1.stopASRService();
+            //speechService = false;
+			// if(audio_context!=null)
+			// {
+				// if(audio_context.state!='closed')
+				// {
+					// audio_context.close();
+				// }
+			// }
+            // soc1.socket.emit('stop');
+            // soc1.socket.disconnect();
+            // flag = 0;
+        }
+
+
+        /* To Disable Inspect Element */
+        // $(document).bind("contextmenu", function (e) {
+            // e.preventDefault();
+        // });
+
+        // $(document).keydown(function (e) {
+            // if (e.which === 123) {
+                // return false;
+            // }
+            // if (event.keyCode == 123) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.keyCode == 'H'.charCodeAt(0)) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.keyCode == 'F'.charCodeAt(0)) {
+                // return false;
+            // }
+            // if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
+                // return false;
+            // }
+        // });
+
+class asrService {
+    #privateField;
+    constructor(protocol="wss", ip=window.location.hostname, port=8000) {
+      this.#privateField="private";
+      this.url=protocol+"://"+ip+":"+port
+      this.socketio = io(this.url,{secure: true,
+        'reconnection': true,
+        'reconnectionDelay': 1000,
+        'reconnectionAttempts': 4,
+         pingInterval: 1000 * 60 * 5,
+         pingTimeout: 1000 * 60 * 3
+      });
+      //this.callbackFunc=callback
+      this.optionsASR = {model: 'none', language: 'hi'}
+      this.audio_context = audio_context;
+      this.socket = this.socketio.on('connect', function() {
+        console.log('Socket connected to speech server');
+		flag=1;
+      });
+      this.socket.on('lang_pair_resp', function(data){
+        console.log("hi finally return")
+        console.log(data);
+      });
+      this.socket.on('transcript', function(data) {
+        console.log(data.transcript); // true
+            //var d = JSON.parse(data);
+            //if (data.is_final == true) {
+            //    console.log(data.transcript);
+
+            //}
+            //$("#InputEnter").val(data['transcript']);
+		if (data['is_final']){	
+		$("#InputEnter").val($("#InputEnter").val()+data['transcript']);
+        //$("#InputEnter").append('<div></div>');
+    }
+      
+      });
+      this.socket.on('connect_error', function(result) {
+        console.log("connection issue");
+		flag=0;
+        //restartService=false;
+      })
+      this.socket.on('connect_failed', function(result) {
+        console.log("connection issue");
+		flag=0;
+        //restartService=false;
+      })
+      this.socket.on('disconnect', function(result) {
+        console.log("connection disconnect");
+		flag=0;
+        //restartService=false;
+        
+      })
+
+    }
+    age(x) {
+        return x - this.year;
+
+      }
+
+ stopASRService() {
+      //speechService= false;if(audio_context!=null)
+		if(audio_context!=null)
+			{
+				if(audio_context.state!='closed')
+				{
+					audio_context.close();
+				}
+			}
+      
+            flag = 0;
+      //this.audio_context.close();
+      this.socket.emit('stop');
+      this.socket.disconnect();
+        
+    }
+}
+

@@ -1,0 +1,537 @@
+/* Desktops (with large screens) */
+@media only screen and (min-width : 1824px) {
+  
+    
+}
+
+
+
+/* Laptops */
+
+@media only screen and (min-width : 125px) and (max-width : 1440px) {
+/* @media only screen and (min-width : 1224px) { */
+    .page-header {
+
+        padding: 0 15px ;
+ 
+    }
+    #warp {
+        padding: 0 15px;
+    }
+    .right-nav .nav-item .nav-link {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    .custom-tab .nav-item img {
+        height: 18px;
+        margin-right: 5px;
+    }
+    .right-nav .nav-item .nav-link span {
+
+        margin-right: 5px;
+    }
+
+
+    #pencet {
+        margin-left: 30px;
+    }
+
+    .v-progress {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+/* Tablets and iPads */
+@media only screen and (min-width : 769px) and (max-width : 1024px) {
+    .v-progress {
+        width: 100%;
+       
+    }
+
+    #pencet {
+        margin-right: 10px;
+    }
+    .page-header {
+
+        padding: 0 ;
+ 
+    }
+    .mobe-view-show {
+        display: block;
+    }
+
+    .dest {
+        display: block;
+    }
+    
+    .mob {
+        display: none;
+
+    }
+
+    .mob2 {
+        display: block;
+    }
+    .login-mob {
+        display: block;
+    }
+    #warp {
+        padding: 0 30px;
+    }
+
+
+    .right-nav .nav-item {
+        display: none;
+    }
+    .right-nav .nav-item .nav-link span {
+        display: none;
+    }
+    .dropdown-menu li .nav-link .link-list-icon1, .dropdown-menu li .nav-link .link-list-icon2, .dropdown-menu li .nav-link .link-list-icon3,   .dropdown-menu li .nav-link .link-list-text{display: block;}
+    /* .dropdown-menu.show {
+        display: block;
+        top: 42px !important;
+    } */
+    .right-nav .nav-item:last-child {
+        display: block;
+    }
+
+  
+
+    .login-mob {
+        display: none;
+    }
+    .login-mob2 {
+        display: block;
+        margin-top: 20px !important;
+    }
+    #pencet.Diam {
+ 
+        right: -20px;
+    }
+
+    
+    #progressbar {
+
+        display: block;
+   
+
+    }
+    #progressbar li{     margin: 5px;}
+    .dash-line{display: none;}
+    #msform fieldset {
+        width: 100%;
+    }
+
+
+}
+
+
+
+  @media(max-width:991.98px){
+      ul.nav.top-right-nav {
+    text-align: right;
+}
+  .top-header ul.nav.top-nav {display: none;}
+.bhashini-dropdown {top: 2px;right: auto !important;left: 20px !important;margin-left: 20px;z-index: auto;}
+.logo {float: inherit;}
+.logonsp {width: 100%;}
+.responcive-nav .accordion .accordion-item .accordion-collapse .accordion-body .nav{padding-left: 20px;}
+.responcive-nav{padding: 0px;}
+.responcive-nav .accordion .accordion-item{padding: 0px;}
+.about-bg .accordion-body .nav {padding: 15px 20px;}
+
+#pencet.Diam{right: 320px;}
+
+
+
+
+
+
+  }
+
+
+@media(max-width:576.8px){
+   
+.announcement-wrap {padding: 3rem 0;}
+.logo-slider{margin-top:0px;}
+ul.nav.footer-nav.justify-content-center{column-count: 2;}
+#pencet.Diam {right: 120px;}
+
+
+
+
+  }
+
+
+
+
+
+
+  
+ 
+
+@media only screen and (min-width : 481px) and (max-width : 768px) {
+  
+    .nav{display: block;}
+    .nav-pills, .nav-tabs{ display:flex;}
+    .page-header {
+
+        padding: 0 20px;
+ 
+    }
+    .v-progress {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+
+    .d-flex-mob {
+        display: block !important;
+    }
+
+    .login-mob2 {
+        display: none
+
+    }
+
+    .dest {
+        display: block ;
+    }
+    
+    .mob {
+        display:none;
+
+    }
+
+    
+    .mob2 {
+        display: none;
+    }
+   
+    #warp {
+        padding: 0 30px;
+    }
+  
+
+    .right-nav {
+        display: none;
+    }
+    .login-mob {
+        display: block;
+    }
+  
+    .logo-warp {
+        justify-content: space-between;
+    }
+
+
+    .logo-warp li {
+        display: inline-flex;
+    }
+
+    .d-flex-mob {
+        display: block !important;
+    }
+
+
+    .top-header .d-flex-mob {
+        display: flex !important;
+    }
+
+  
+
+    .studnt-login-tips {
+       
+        padding: 130px 0 0 30px;
+       
+    }
+
+  
+    
+    #progressbar {
+
+        display: block;
+   
+
+    }
+    #progressbar li{     margin: 5px;}
+    .dash-line{display: none;}
+    #msform fieldset {
+        width: 100%;
+    }
+    
+   
+}
+
+/* Just smartphones */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+#pencet.Diam {
+        right: 18px;
+    }
+    .otp-fild {
+        width: 2.4rem;
+    }
+
+
+    .nav{display: block;}
+    .nav-pills, .nav-tabs{ display:flex; margin-bottom: 30px;}
+    .page-header {
+
+        padding: 0 15px;
+ 
+    }
+    .top-header{padding: 6px 15px;}
+    .v-progress {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+
+    .inner-banner-wrap{ padding: 0;}
+    .inner-banner img {
+        width: 100%;
+        float: left;
+        height: 150px;
+    }
+    .header-title {
+        font-size: 30px;
+    }
+
+    .pages-section {
+        padding: 0;
+    }
+
+    .institute-box {
+        margin: 30px 0;
+        text-align: center;
+     
+    }
+    .institute-box .institute-box-icon {
+        height: auto;
+        position: relative;
+      
+    }
+
+    .institute-box .institute-box-icon img {
+           position: relative;
+ 
+    }
+    
+
+    .page-header {
+ 
+    }
+
+    .searchbox .dropdown {
+        width: 70px;
+    }
+    .about-bg {
+        width: 108% !important;
+        background: #EDEDED !important;
+        margin: 0 0 0 -4% !important;
+        padding: 15px 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+
+    #menu {
+        margin-right: 10px;
+    }
+
+   
+    .form-check {
+        margin: 7px 0;
+    }
+
+    .responcive-nav {        padding:20px 10px 15px 10px;    }
+
+    .responcive-nav .accordion .accordion-item .accordion-header .accordion-button {
+        display: flex;
+    }
+    .responcive-nav .accordion .accordion-item h5{ display: none;}
+    .line{display: none;}
+
+    .responcive-nav .accordion .accordion-item{ border:solid 1px #ccc; margin: 7px 0; border-radius: 4px; overflow: hidden; padding: 0;}
+
+ 
+   
+    .responcive-nav .accordion .accordion-item .collapse:not(.show) {display: none; }
+
+    .responcive-nav .accordion .accordion-item .accordion-header .accordion-button::after{ display: block;}
+
+    .responcive-nav .accordion .accordion-item .accordion-header:last-child .accordion-button::after{ display: none;}
+
+
+
+    .mobe-view-show{display: block;}
+
+    .header hr{display: none;}
+   .mob2{display: none;}
+
+    .searchbox .form-control{width: 100%;}
+
+    .services-box {
+        min-height: 120px;
+        width: 96%;
+        left: 0%;
+       margin: 10px auto;
+    }
+
+    .services-box .service-icon {
+        text-align: left;
+        width: 30%;
+        margin: 0;
+        padding: 5px 15px;
+        height: 30px;
+    }
+    .services-box .service-icon img { float: right;}
+
+    .services-box h3 {
+        width: 70%;
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: 400;
+        display: block;
+    }
+
+    .top-header {
+        display: block;
+    }
+
+    .login-mob {
+        display: block;
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    #warp {
+        padding: 0;
+    }
+
+    .logo-warp {
+        justify-content: space-between;
+    }
+
+
+    .logo-warp li {
+        display: inline-flex;
+    }
+
+    .d-flex-mob {
+        display: block !important;
+    }
+    .navbar-toggler {
+
+        margin: 0 0 0 10px !important;
+    }
+    .serch-icon-bg {
+        margin-right: 10px;
+    }
+    #serch-box-mob {
+        display: none;
+        width: 96% !important;
+        position: absolute;
+        left: 2%;
+        top: 7%;
+        z-index: 999;
+    }
+
+
+
+    .dest {
+        display: none;
+    }
+
+    .mob {
+        display: block;
+    }
+    .logo img {
+        height: 42px;
+    }
+
+    .footer-nav .nav-item .nav-link {
+        font-size: 15px;
+    }
+    .footer-nav .nav-item {
+
+        margin: 5px 0;
+        border: none;
+        width: 50%;
+    }
+    .footer-nav .nav-item:last-child { width: 100%;}
+    .announ {
+        padding-right: 0;
+        padding-left: 15px;
+    }
+
+    .logo-warp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+ 
+    .student-box h4 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    .student-box {
+        width: 100%;
+        float: left;
+        padding: 30px;
+        /* background:rgb(204 204 204 / 21%); */
+        margin: 10px 0;
+        
+    }
+
+    .studnt-login-tips {
+
+        padding: 60px 0 0 0;
+      
+    }
+
+    .dropdown-label {
+        font-size: 0px !important;
+    }
+    .searchbox .dropdown {
+        position: relative;
+        min-width: 50px;
+    }
+    .dropdown-label:before{ display: none;}
+
+    .d-flex {
+        display: block !important;
+    }
+
+  
+    
+    .vertical-tab-content{border-left: none; border: solid 1px #ccc; padding: 15px; display: flex;}
+    #progressbar {
+
+        display: block;
+   
+
+    }
+    #progressbar li{     margin: 5px;}
+    .dash-line{display: none;}
+    #msform fieldset {
+        width: 100%;
+    }
+
+}
+
+
+

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://gate.nptel.ac.in/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta class="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="rating" content="General">
+  <meta name="revisit-after" content="7">
+  <meta name="robots" content="index, follow">
+  <meta name="EXPIRES" content="0">
+  <meta http-equiv="EXPIRES" content="1">
+  <meta http-equiv="CACHE-CONTROL" content="max-age=84400, must-revalidate">
+  
+  <title>GATE Portal | NPTEL</title>
+  <link rel="icon" href="https://gate.nptel.ac.in/images/GATE_Portal_1.png" type="image/x-icon">
+  <script type="text/javascript" src="./GATE Portal _ NPTEL_files/jquery.1.10.2.js.download"></script>
+  <script type="text/javascript" src="./GATE Portal _ NPTEL_files/bootstrap.3.3.4.js.download"></script>
+  <link href="./GATE Portal _ NPTEL_files/bootstrap.3.3.4.css" rel="stylesheet">
+  <link href="./GATE Portal _ NPTEL_files/header_style.css" rel="stylesheet">
+  <link href="./GATE Portal _ NPTEL_files/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./GATE Portal _ NPTEL_files/jquery.dataTables.min.css">
+  <script type="text/javascript" src="./GATE Portal _ NPTEL_files/jquery.dataTables.min.js.download"></script>
+  <link href="./GATE Portal _ NPTEL_files/css" rel="stylesheet">
+<script type="text/javascript">
+  $(function(){
+    $("header").load("menu.php"); 
+    $("footer").load("footer.html");
+  });
+</script>
+</head>
+<body style=""><header>
+
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="rating" content="General">
+  <meta name="revisit-after" content="7">
+  <meta name="robots" content="index, follow">
+  <meta name="EXPIRES" content="0">
+  <meta http-equiv="EXPIRES" content="1">
+  <meta http-equiv="CACHE-CONTROL" content="max-age=84400, must-revalidate">
+  
+  <title>GATE Portal | NPTEL</title>
+  <link rel="icon" href="https://gate.nptel.ac.in/images/GATE_Portal_1.png" type="image/x-icon">
+  <link href="./GATE Portal _ NPTEL_files/header_style.css" rel="stylesheet">
+  <link href="./GATE Portal _ NPTEL_files/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./GATE Portal _ NPTEL_files/jquery.dataTables.min.css">
+  <script type="text/javascript" src="./GATE Portal _ NPTEL_files/jquery.dataTables.min.js.download"></script>
+  <!--Nav bar page & its contents-->
+  <style type="text/css">
+    .dataTables_wrapper {
+      padding: 10px 15px;
+    }
+
+    .dropbtn {
+      background: inherit;
+      color: white;
+      padding: 19px;
+      font-size: 16px;
+      border: none;
+    }
+
+    .float {
+      position: fixed;
+      width: 60px;
+      height: 78px;
+      bottom: 40px;
+      right: -8px;
+      background-color: #4a7bcf;
+      color: #FFF;
+      text-align: center;
+    }
+
+    .my-float {
+      margin-top: 22px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    thead {
+      background-color: #7f0804;
+      color: white;
+      height: 60px;
+    }
+
+    td#bold {
+      background-color: #eaeaea;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+
+
+    td {
+      font-size: 16px;
+    }
+
+    .font {
+      font-size: 16px;
+    }
+
+    .panel {
+      box-shadow: 0 4px 5px;
+    }
+
+    .dropdown-content a:hover {
+      color: white;
+      background-color: #4c5a7d;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #051c52;
+    }
+
+    .jumbotron {
+      padding: 15px;
+      margin-bottom: 20px !important;
+      color: white;
+      background-color: #445784;
+      font-size: 16px;
+    }
+
+    .jumbotron p {
+      color: white;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    .navbar-brand {
+      background-color: #FFF;
+      height: 63px;
+    }
+
+    #formSearch {
+      padding: 3%;
+    }
+
+    #sub-header {
+      margin-top: 1px;
+      color: #fff;
+      position: relative;
+      /*text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);*/
+      width: 100%;
+      /*background:#0cbdaa url(./images/bg_sub-header.png) repeat 0 0;*/
+    }
+
+    @media only screen and (max-width: 600px) {
+      .image {
+        width: 293px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        position: relative;
+      }
+
+      #top {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 25px;
+      }
+    }
+
+    @media only screen and (min-width: 1240px) {
+
+      .navbar,
+      .dropbtn {
+        font-size: 18px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 2560px) {
+      iframe {
+        height: 381px;
+      }
+    }
+
+    .styled-select select {
+      color: #5a3232;
+      width: 100%;
+      overflow: hidden;
+      height: 44px;
+      background: url(./images/down_arrow_select.png) right center no-repeat #fff;
+      border: 1px solid #c3bdbd;
+      margin-bottom: 10px;
+      padding: 5px 5px 5px 15px;
+      height: 41px;
+      margin: 0;
+      font-weight: 400;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .pagination>li>a,
+    .pagination>li>span {
+      margin-left: 0px !important;
+    }
+
+    .pagination>li>a:hover {
+      background-color: black;
+    }
+
+    .pagination>li>a,
+    .pagination>li>span {
+      padding: 8px 6px;
+    }
+
+    @media (max-width: 1636px) {
+      .navbar-header {
+        float: none;
+      }
+
+      .navbar-toggle {
+        display: block;
+      }
+
+      .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+
+      .navbar-collapse.collapse {
+        display: none !important;
+      }
+
+      .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+      }
+
+      .navbar-nav>li {
+        float: none;
+      }
+
+      .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .navbar-text {
+        float: none;
+        margin: 15px 0;
+      }
+
+      .navbar-collapse.collapse.in {
+        display: block !important;
+      }
+
+      .collapsing {
+        overflow: hidden !important;
+      }
+    }
+  </style>
+  <nav class="navbar navbar-inverse">
+    <div class="head-container navcontrol">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://gate.nptel.ac.in/index.html" style="width:210px;"><img src="./GATE Portal _ NPTEL_files/GATE_Portal.png" class="img-responsive nptellogo"></a>
+        <a class="navbar-brand" href="https://gate.nptel.ac.in/index.html" style="width:210px;"><img src="./GATE Portal _ NPTEL_files/logo.jpg" class="img-responsive nptellogo"></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <div class="right">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="li-padding-menu"><a href="https://gate.nptel.ac.in/aboutus.html">About us</a></li>
+            <li class="li-padding-menu"><a href="https://sites.google.com/smail.iitm.ac.in/jam/home" target="_blank">JAM'23</a></li>
+            <!-- <li class="dropdown"><button class="dropbtn">Live Mentoring Sessions <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+              <a href="mentor_sessions_3.html">Phase III</a>
+        <a href="mentor_sessions_2.html">Phase II</a>
+              <a href="mentor_sessions.html">Phase I</a>
+            </div>
+          </li> -->
+            <li class="li-padding-menu"><a href="https://gate.nptel.ac.in/departments.php?c_id=1">GATE Syllabus Mapping</a></li>
+            <!-- <li class="dropdown"><button class="dropbtn">NPTEL GATE Mapping <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+              <a href="departments.php?c_id=1">GATE Syllabus Mapping</a>
+              <a href="gatequestionpaper.html">GATE Question paper Mapping</a>
+            </div>
+          </li> -->
+            <li class="li-padding-menu"><a href="https://gate.nptel.ac.in/departments.php?c_id=2">Video Solutions</a></li>
+            <li class="dropdown"><button class="dropbtn">GATE Practice Tests <i class="fa fa-caret-down"></i></button>
+              <div class="dropdown-content">
+                <a href="https://gate.nptel.ac.in/index.php">Go to Course</a>
+                <a href="https://gate.nptel.ac.in/exam.html">Go to Mock Test</a>
+                <a href="https://gate.nptel.ac.in/leaderboard.php">Leader Board</a>
+                <a href="https://gate.nptel.ac.in/progress.php">Mock Test Progress</a>
+              </div>
+            </li>
+                      </ul>
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav></header>
+<style>
+h4 {
+    color: #0b0200 !important;
+    font-family: 'Prata', serif;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+.carousel-caption p{
+  font-size: 2rem;
+  color: white;
+  text-shadow: none;
+  background-color: black;
+  opacity: 0.6;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.item img{
+  /*height: 350px !important;*/
+    /*object-fit: cover;*/
+  width: -webkit-fill-available;
+}
+
+p{
+  font-size: 16px !important;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.5px;
+  color: #2a251f;
+}
+</style>
+  
+    
+  <section id="main-content">
+     <div class="container">
+       <section id="sub-header">
+        <div class="container" style="padding-left: 0px;padding-right: 0px;">
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="./GATE Portal _ NPTEL_files/slider-01.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="./GATE Portal _ NPTEL_files/slider-02.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="./GATE Portal _ NPTEL_files/slider-03.jpg" alt="New York" style="width:100%;">
+      </div>
+  
+    </div>
+
+  </div>
+</div>
+    </section> 
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <br><br>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h4><b>NPTEL GATE Project</b></h4>
+                        <p style="font-size: 16px !important">NPTEL is a joint initiative of the IITs and IISc. NPTEL stands for <b style="color: black;">National Programme on Technology Enhanced Learning</b>. We are supported by the Ministry of Education, Government of India. This is a large platform providing free online certification courses in the MOOCs format. NPTEL offers <i>500+ courses</i> every semester. To provide students with an integrated platform to  prepare for GATE, this project was initiated with CSR support from <b style="color: black;">Amadeus Labs Bengaluru.</b></p>
+                        <p style="font-size: 16px !important">GATE is not only a qualifying exam for graduate studies but also provides an opportunity for PSU jobs.</p>
+                    </div>
+                </div>
+                <div class="clearfix  visible-sm visible-xs">&nbsp;</div>
+            </div>
+            <div class="row border animation-element bounce-up">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin subject">
+                <h4><b>GATE Mock Test series</b></h4>
+                   <p style="font-size: 16px !important">Tests are designed to simulate the real GATE exam environment. These tests are
+                    developed by IIT faculty and experts under the NPTEL initiative. This
+                    is a valuable opportunity to assess your preparation, experience real-time test
+                    conditions, and identify areas to improve before the actual GATE exam.</p>
+                    <p>Mock Tests  commencing from August 17th 2025 , Every Sunday 2:00 PM to 5:PM IST. Mock Test Schedule - <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQlwnDWAhRpwgeZhG7a3EDoz5jJFV8VWckHMzGvBfxAeZcvYPFsuv_4zpwXaQs0dqbVQSRdl1Z-EWWK/pubhtml" target="_blank">Click Here</a></p>
+                    <img src="./GATE Portal _ NPTEL_files/gate success.jpg" alt="Mock Test" title="Mock Test" style=" max-height: 500px;">
+                  </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 subject">
+                    <div class="image"><a href="https://gate.nptel.ac.in/seek.php" target="_blank"><img src="./GATE Portal _ NPTEL_files/With Date - Mock Test_new.png" alt="NPTEL_GATE_Mapping" title="NPTEL_GATE_Mapping"></a></div>
+                </div>
+            </div>
+            <div class="row border animation-element bounce-up">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 subject">
+                  <div class="image"><a href="https://gate.nptel.ac.in/departments.php?c_id=2" target="_blank"><img src="./GATE Portal _ NPTEL_files/Video_solutions.jpg" alt="Video_solutions" title="Video_solutions"></a>
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin subject">
+                  <h4><b>Video Solutions to Previous GATE Questions</b></h4>
+                     <p style="font-size: 16px !important">Video solutions are provided for the previous year GATE question papers. The video solutions are designed to be self-contained - starting from a quick recap of the basic concepts needed in solving the problem, followed by a detailed solution using fundamental concepts and ending by providing tricks, if any, to solve the problems. </p>
+                  </div>
+              </div>
+              <div class="row border animation-element bounce-up">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin subject">
+                  <h4><b>Video explanation of Subject Concepts</b></h4>
+                     <p style="font-size: 16px !important">The NPTEL platform hosts video lectures covering a wide range of subjects covering the entire GATE syllabus across Engineering and Science disciplines. To enable easy access, all the topics of GATE syllabus are mapped and linked to the most relevant NPTEL video lecture(s). <i>These NPTEL lectures are mapped to various topics of the GATE Syllabus.</i></p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 subject">
+                      <div class="image"><a href="https://gate.nptel.ac.in/departments.php?c_id=1" target="_blank"><img src="./GATE Portal _ NPTEL_files/NPTEL_GATE_Mapping.jpg" alt="NPTEL_GATE_Mapping" title="NPTEL_GATE_Mapping"></a></div>
+                  </div>
+              </div>
+              <!-- <div class="row border animation-element bounce-up">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 subject">
+                  <div class="image"><a href="mocktest.php" target="_blank"><img src="images/MockTest.jpg" alt='MOCKTEST' title='MOCKTEST'></a></div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin subject">
+                  <h4><b>Practice Tests for GATE Preparation</h4>
+                      <p style="font-size: 16px !important">Practice tests are provided to help the students to practice the GATE questions in an environment similar to the GATE exam. The MCQ selection screen, navigation options are similar to the web environment of the GATE exam.</b></p>
+                  </div>
+              </div> -->
+              <style type="text/css">
+              /*animation element*/
+
+              .animation-element {
+                  position: relative;
+                  width: 100%;
+                  margin: 0% 1.33 2.66% 1.33%;
+                  float: left;
+              }
+              /*3 grid layout*/
+
+              .animation-element:nth-of-type(3n-2) {
+                  width: 100%;
+                  margin: 0% 1.375% 2.75% 0%;
+                  clear: left;
+              }
+
+              .animation-element:nth-of-type(3n-1) {
+                  width: 100%;
+                  margin: 0% 1.375% 2.75% 1.375%;
+              }
+
+              .animation-element:nth-of-type(3n-0) {
+                  width: 100%;
+                  margin: 0% 0% 2.75% 1.375%;
+                  clear: right;
+              }
+              /*bounce up animation for the subject*/
+
+              .bounce-up .subject {
+                  opacity: 0;
+                  -moz-transition: all 700ms ease-out;
+                  -webkit-transition: all 700ms ease-out;
+                  -o-transition: all 700ms ease-out;
+                  transition: all 700ms ease-out;
+                  -moz-transform: translate3d(0px, 200px, 0px);
+                  -webkit-transform: translate3d(0px, 200px, 0px);
+                  -o-transform: translate(0px, 200px);
+                  -ms-transform: translate(0px, 200px);
+                  transform: translate3d(0px, 200, 0px);
+                  -webkit-backface-visibility: hidden;
+                  -moz-backface-visibility: hidden;
+                  backface-visibility: hidden;
+              }
+
+              .bounce-up.in-view .subject {
+                  opacity: 1;
+                  -moz-transform: translate3d(0px, 0px, 0px);
+                  -webkit-transform: translate3d(0px, 0px, 0px);
+                  -o-transform: translate(0px, 0px);
+                  -ms-transform: translate(0px, 0px);
+                  transform: translate3d(0px, 0px, 0px);
+              }
+              h4 {
+                  color: #7f0804;
+              }   
+              @media only screen and (min-width: 1240px) {
+                  .row {
+                    font-size: 16px;
+                }
+            }
+            .image, .margin {
+                margin: 40px 0px;
+            }
+            .border{
+                border-top: 1px solid grey;
+            }
+            .image img {
+                width: 90%;
+                border: 1px solid #d4d1d1;
+                box-shadow: 5px 5px #d4d1d1;
+            }
+
+            @media only screen and (max-width: 300px){
+                .image {
+                    width: 240px !important;
+                }
+            }
+        </style>
+        <script type="text/javascript">
+            var $animation_elements = $('.animation-element');
+            var $window = $(window);
+
+            function check_if_in_view() {
+              var window_height = $window.height();
+              var window_top_position = $window.scrollTop();
+              var window_bottom_position = (window_top_position + window_height);
+
+              $.each($animation_elements, function() {
+                var $element = $(this);
+                var element_height = $element.outerHeight();
+                var element_top_position = $element.offset().top;
+                var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+    //(element_bottom_position >= window_top_position) &&//
+    if ((element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+  } else {
+      $element.removeClass('in-view');
+  }
+});
+          }
+
+          $window.on('scroll resize', check_if_in_view);
+          $window.trigger('scroll');
+      </script>
+  </div>
+</div>
+</section> <!-- End index -->
+
+<footer><style type="text/css">
+p{
+  font-size: 15px !important;
+  font-family: sans-serif;
+}
+.decoration, .decoration:hover, .decoration:active, .decoration:visited {
+    color: white;
+    text-decoration: none !important;
+}
+.footer-copyright{
+    padding: 10px !important;
+    background-color: #243561 !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+  @media screen and (width: 1024px) {
+   .span_mail{
+    font-size: 12px !important;
+   } 
+}
+</style>
+<!--Footer contents-->
+ <!-- Footer -->
+<footer class="page-footer jumbotron" style="margin-bottom: 0px !important;">
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdjD-aA5bX2-De5GWa9QprolJZCTAnlYZqTXXA56Gi1h5Q45w/viewform?usp=sf_link" target="_blank" data-toogle="tooltip" title="Drop a Feedback" class="float decoration">
+<i class="fa fa-comments-o my-float" aria-hidden="true" style="font-size: 30px;"></i>
+</a>
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+     <div class="col-md-4 col-lg-4 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4"></h5>
+        <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="decoration">View License Deed</a> | <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode" target="_blank" class="decoration">View Legal Code</a>|<br><a href="https://gate.nptel.ac.in/copyrights.html" target="_blank" class="decoration">Copyright &amp; Disclaimer</a> | <a href="https://gate.nptel.ac.in/privacy_policy.html" target="_blank" class="decoration">Privacy Policy</a></p>
+        <img src="./GATE Portal _ NPTEL_files/logo.jpg" style="width: 18rem;">
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <ul class="list-unstyled">
+          <li>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i>
+              <span class="span_mail">gatesupport@nptel.iitm.ac.in</span></p>
+            </li>
+            <li>
+              <p><i class="fa fa-comments-o" aria-hidden="true" style="font-size: 24px;"></i><a href="https://docs.google.com/forms/d/e/1FAIpQLSdjD-aA5bX2-De5GWa9QprolJZCTAnlYZqTXXA56Gi1h5Q45w/viewform?usp=sf_link" target="_blank" class="decoration"> Drop Your Feedbacks Here!</a></p>
+            </li>
+            <li>
+              <p><a href="https://drive.google.com/open?id=1-rayyPpKUzm36Yc-zjHZS485ng8VHjbQ" target="_blank" class="decoration"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;<span class="span_mail">Code of Conduct</span></a></p>
+
+            </li>
+          </ul>
+
+        </div>
+      <!-- Grid column -->
+
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 text-center mx-auto my-4">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/pages/Nptel-India/1413735098927291" target="_blank" style="color:#eeeeee;"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+        <!-- Twitter -->
+        <a href="https://twitter.com/nptelindia" target="_blank" style="color:#eeeeee;"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/nptel_india/" target="_blank" style="color:#eeeeee;"><i id="social-in" class="fa fa-instagram fa-3x social"></i></a>
+        <!-- Linked in -->
+        <a href="https://www.linkedin.com/company/nptel/" target="_blank" style="color:#eeeeee;"><i id="social-li" class="fa fa-linkedin-square fa-3x social"></i></a>
+        <!-- Youtube-->
+        <a href="https://www.youtube.com/channel/UCyUsM3Hs_uhK4hF-FlbP5iQ" target="_blank" style="color:#eeeeee;"><i id="social-yt" class="fa fa-youtube-square fa-3x social"></i></a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+<!-- Footer -->
+	</footer>
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 GATE Portal | NPTEL. All Rights Reserved.
+  </div>
+  <!-- Copyright -->
+</footer>
+
+</body></html>

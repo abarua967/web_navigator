@@ -1,0 +1,25 @@
+
+$(document).ready(function(){
+	
+	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
+	
+	//$('select').select2();
+    $('.colorpicker').colorpicker();
+    
+	$('.datepicker').datepicker({
+		//daysOfWeekDisabled:'06',
+		//startDate: '<?php echo date('d/m/Y',strtotime("last monday")); ?>',
+		//endDate:'today',
+		autoclose: true,
+		todayHighlight: true,
+		format:'dd/mm/yyyy'
+		
+	});
+	
+	/* jQuery('.datepicker-autoclose3').datepicker({
+       
+		
+         
+        }); */
+	
+});
